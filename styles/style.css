@@ -1,0 +1,352 @@
+*{
+	text-align: center;
+	font-family: Arial, sans-serif;
+	margin: auto;
+}
+
+body{
+	background-color: rgb(255,230,230);
+	margin: 50px 10px 40px 10px;
+}
+
+h1{
+	margin: 25px;
+	font-variant: small-caps;
+}
+
+/* ===== HEADER ===== */
+
+header{
+	box-sizing: border-box;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgb(245,150,150);
+	height: 40px;
+}
+
+header > a{
+	text-decoration: none;
+	height: 40px;
+	position: fixed;
+	top: 0;
+	right: 150px;
+	left: 150px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header .logo{
+	color: white;
+	padding: 5px;
+	font-family: "Book Antiqua", serif;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+/* ===== NAV : accueil, contact, profil, panier ===== */
+
+nav > a,
+nav > div{
+	text-decoration: none;
+	height: 40px;
+	width: 60px;
+	color: white;
+	padding: 5px;
+	position: fixed;
+	top: 0;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+nav .accueil{ left: 0; }
+nav .contact{ left: 60px; }
+
+nav .menu-profil{ right: 0; }
+nav .menu-panier,
+nav .panier{ right: 60px; }
+
+nav img{
+	position: static;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+/* ===== MENUS DEROULANTS (profil / panier) ===== */
+
+.menu-profil,
+.menu-panier{
+	position: fixed;
+}
+
+.dropdown{
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 40px;
+	right: 0;
+	width: 140px;
+	background-color: rgb(245,150,150);
+}
+
+.menu-profil:hover .dropdown,
+.menu-panier:hover .dropdown{
+	display: flex;
+}
+
+.dropdown a{
+	position: static;
+	height: auto;
+	width: auto;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+}
+
+.dropdown a:hover{
+	background-color: rgb(245,180,180);
+}
+
+/* ===== IMAGES GENERALES ===== */
+
+img{
+	box-sizing: border-box;
+	border-radius: 20px;
+	border: rgb(245,150,150) solid 3px;
+	width: 100%;
+	max-width: 400px;
+}
+
+.article img{
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+/* ===== DIVERS (contact, article détaillé) ===== */
+
+.description{
+	margin: 20px;
+	text-align: center;
+}
+
+.tab th{
+	color: white; 
+	padding: 10px; 
+	font-size: 1.3em;
+}
+
+th p{
+	background-color: rgb(245,150,150);
+	border-radius: 30px;
+	margin: 2px;
+	padding: 2px;
+	font-weight: normal;
+	width: 320px;
+}
+
+.tab img{
+	border-radius: 30px;
+	border: rgb(245,150,150) solid 2px;
+	height: 150px;
+	width: 150px;
+	margin: auto;
+}
+
+table{
+	margin-top: 30px;
+	width: 80%;
+	max-width: 800px;
+	margin: auto;
+	border-spacing: 0;
+	overflow: hidden;
+}
+
+td{
+	padding: 15px;
+}
+
+.compo p{
+	font-weight: bold;
+	font-size: 1.2em;
+	background-color: rgb(245,150,150);
+	padding: 5px;
+	border-radius: 20px;
+	width: 150px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.compo ul{
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	width: 130px;
+}
+
+.compo li{
+	margin-left: 20px;
+	padding: 2px;
+	text-align: left;
+	background-color: white;
+}
+
+.infos{
+	width: 300px;
+	text-align: left;
+	padding: 50px;
+	border: rgb(245,150,150) 1px dotted;
+	background-color: rgb(255,240,240);
+	border-radius: 10px;
+}
+
+.info input{
+	width: 300px;
+
+}
+
+
+input{
+	height: 25px;
+	margin-top: 5px;
+	color: rgb(200,50,50);
+	box-sizing: border-box;
+}
+
+.valider{
+	margin: auto;
+	text-decoration: none;
+	padding: 2px 5px 2px 5px;
+	height: 30px;
+	font-size: 1.1em;
+	background-color: rgb(245,150,150);
+	color: white;
+	border-radius: 5px;
+	border: rgb(200,50,50) 1px solid;
+}
+
+.valider:hover{
+	background-color: rgb(210,100,100);
+}
+
+
+
+/* ===== LISTE DES ARTICLES (accueil) ===== */
+
+.articles{
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.article{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+.article a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 15px;
+	padding: 15px;
+	width: 200px;
+	background-color: white;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(80, 10, 10, 0.2);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article a:hover{
+	transform: scale(1.02);
+	box-shadow: 0 3px 10px 3px rgba(80, 10, 10, 0.25);
+}
+
+.nom{
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: black;
+	margin-top: 0.5rem;
+	padding: 3px 7px 3px 7px;
+	border-radius: 10px;
+}
+
+.prix{
+	font-weight: bold;
+	font-size: 1rem;
+	color: white;
+	background-color: rgb(245,150,150);
+	padding: 0.2rem 0.7rem;
+	border-radius: 50px;
+	margin: 5px;
+}
+
+.stock{
+	font-size: 0.8em;
+	color: grey;
+	background-color: white;
+}
+
+.epuise{
+	color: rgb(200,50,50);
+	font-weight: bold;
+}
+
+.achatsTab{
+	padding: 10px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.achatsTab th{
+	padding: 10px;
+}
+
+.achatsTab th~th,
+.achatsTab td~td{
+	border-left: 1px dotted rgb(250,150,150);
+}
+
+.achatsTab td{
+	border-top: 1px dotted rgb(250,150,150);
+}
+
+/* ===== MESSAGES ===== */
+.messages{
+	max-width: 600px;
+	margin: 15px auto;
+	padding: 10px 20px;
+	background-color: white;
+	border: 1px solid rgb(200,50,50);
+	border-radius: 10px;
+}
+
+.messages p{ margin: 5px; color: rgb(200,50,50); font-weight: bold; }
+
+/* ===== CHRONO ===== */
+.chrono{ font-weight: bold; color: rgb(200,50,50); }
+
+/* ===== FORMULAIRES DANS LES TABLEAUX / LIGNES ===== */
+form.inline{
+	display: inline;
+	width: auto;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+form.inline input{ width: auto; }
